@@ -83,6 +83,42 @@ end)
 
 
 
+sec3:Button("Make tp work", function()
+
+
+if not game:IsLoaded() then game.Loaded:Wait() end 
+
+
+
+if _G.set_spawn_point then return end
+
+local Players = game:GetService("Players")
+local me = Players.LocalPlayer
+
+local spawn_point = Vector3.new()
+
+
+function _G:set_spawn_point(position)
+    position = typeof(position) == "Vector3" and position or (me.Character and me.Character:GetPivot().Position)
+    if position then
+        spawn_point = position
+    end
+end
+
+
+local function on_character_spawned(character)
+    if not spawn_point then return end
+    character:WaitForChild("Humanoid")
+    character:PivotTo(CFrame.new(spawn_point))
+end
+
+
+--_G:set_spawn_point()
+_G:set_spawn_point(Vector3.new(-6317.85, 86.0134, -97.1401))
+me.CharacterAdded:Connect(on_character_spawned)
+
+
+end)
 
 
 sec:Button("Remove Fall Damage", function()
