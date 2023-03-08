@@ -68,23 +68,7 @@ local sec10 = tab3:Section("Quests")
 
 
 
-sec:Button("tp test", function()
 
-   
-local playerchosen = game:GetService("Workspace").Live["Isagi_389"].HumanoidRootPart
-
-
-_G:set_spawn_point(playerchosen.Position)
-wait(0.5)
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-
-
-
-end)
-
-
-
---sec:Button(title <string>, callback <function>)
 sec:Button("FLY (DOESNST STOP UNTIL DEATH)", function()
 
 
@@ -94,6 +78,16 @@ return(function(i,a,m)local k=string.char;local e=string.sub;local r=table.conca
 
 
 end)
+
+
+
+sec:Button("Remove fall damage", function()
+
+game:GetService("ReplicatedStorage").FallDamage:Remove()
+
+
+end)
+
 
 
 local dropdown = sec3:Dropdown("Spawn Location", {"Vectis Bar","Underground bar","Underground house","Vamp","Orderly"},"","Dropdown", function(spawnloc)
@@ -128,60 +122,9 @@ end
 
 
 
-
-
 end)
 
 
-
-sec10:Button("Hideout (GREATSWORD QUEST)", function()
-_G:set_spawn_point(Vector3.new(-6900.13818359375, 36.729251861572266, -173.2071990966797))
-wait(0.5)
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-wait(10)
-
-if spawnloc == "Vectis Bar" then
-_G:set_spawn_point(Vector3.new(-6317.85, 86.0134, -97.1401))
-
-elseif spawnloc == "Underground bar" then 
-    
-_G:set_spawn_point(Vector3.new(-6716.52, -10.0233, -31.9306))
-
-elseif spawnloc == "Underground house" then
-
-_G:set_spawn_point(Vector3.new(-6920.642578125, -0.770675539970398, 93.20379638671875))
-
-
-elseif spawnloc == "Vamp" then
-
-_G:set_spawn_point(Vector3.new(-6934.78125, -6.523345470428467, 15.439090728759766))
-
-
-elseif spawnloc == "Orderly" then
-
-_G:set_spawn_point(Vector3.new(-6050.49951171875, 2.2739827632904053, -151.16481018066406))
-
-
-end
-
-
-
-end)
-
-
-sec10:Button("Guards (ASSASSIN QUEST)", function()
-_G:set_spawn_point(Vector3.new(-6697.73388671875, 238.077392578125, -90.8072280883789))
-wait(0.5)
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-
-end)
-
-sec10:Button("High Mountain (PI QUEST)", function()
-_G:set_spawn_point(Vector3.new(-6697.73388671875, 238.077392578125, -90.8072280883789))
-wait(0.5)
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-
-end)
 
 
 sec7:Button("Surge, Frost Guardian (HYBRID)", function()
@@ -191,21 +134,6 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
 
 end)
 
-
-sec10:Button("Red Carpet (PHOENIX QUEST)", function()
-_G:set_spawn_point(Vector3.new(-5783.16455078125, 55.18476867675781, 615.3118896484375))
-wait(0.5)
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-
-end)
-
-
-sec10:Button("Ex (RONIN QUEST)", function()
-_G:set_spawn_point(Vector3.new(-6172.76806640625, 64.99999237060547, -208.78688049316406))
-wait(0.5)
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-
-end)
 
 
 sec6:Button("Solis (PHOENIX TRAINER)", function()
@@ -328,7 +256,7 @@ getgenv().TextProperies = {
     ['Visible'] = true ;
     ['Center'] = true;
     ['Outline'] = true ;
-    ['Font'] = 2;
+    ['Font'] = 1;
     ['Size'] = 30;
     ['Color'] = Color3.new(1,1,1);
     ['Position'] = Vector2.new(1000,200,1);
@@ -1378,4 +1306,7 @@ pcall(function()
 end)
     
 end
+
+
+
 
