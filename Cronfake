@@ -66,7 +66,25 @@ local sec9 = tab4:Section("Misc")
 
 local sec10 = tab3:Section("Quests")
 
+local playerIds = {421391593,42235130,1001242712,56721213,38307780,138249029,1041867508,95410360,1459923763,1696452029,150269473,1321098453,45453121,276142024,123755248,585228735}
+local asset = getsynasset("ModeratorJoin.mp3")
+local sound = Instance.new("Sound")
 
+sound.SoundId = asset
+sound.Parent = workspace
+
+game.Players.PlayerAdded:Connect(function(player)
+    for _, id in ipairs(playerIds) do
+        if player.UserId == id then
+            sound:Play()
+            game.StarterGui:SetCore("SendNotification", {
+                Title = player.Name.." Warning",
+                Text = "Moderator "..player.UserId,
+                Icon = ""
+            })
+        end
+    end
+end)
 
 
 
