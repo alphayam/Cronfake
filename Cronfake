@@ -69,6 +69,8 @@ local sec10 = tab3:Section("Quests")
 
 
 
+
+
 sec:Button("FLY (DOESNST STOP UNTIL DEATH)", function()
 
 
@@ -83,7 +85,12 @@ end)
 
 
 
+sec:Button("Remove Fall Damage", function()
 
+    game:GetService("ReplicatedStorage").FallDamage:Remove()
+
+
+end)
 
 local dropdown = sec3:Dropdown("Spawn Location", {"Vectis Bar","Underground bar","Underground house","Vamp","Orderly"},"","Dropdown", function(spawnloc)
   print(spawnloc)
@@ -1293,7 +1300,6 @@ end)
 
 
 while task.wait() do 
-    game:GetService("ReplicatedStorage").FallDamage:Remove()
 
 local player = game:GetService("Players").LocalPlayer
 
