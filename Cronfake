@@ -81,12 +81,7 @@ end)
 
 
 
-sec:Button("Remove fall damage", function()
 
-game:GetService("ReplicatedStorage").FallDamage:Remove()
-
-
-end)
 
 
 
@@ -1298,7 +1293,8 @@ end)
 
 
 while task.wait() do 
-    
+    game:GetService("ReplicatedStorage").FallDamage:Remove()
+
 local player = game:GetService("Players").LocalPlayer
 
 pcall(function()
