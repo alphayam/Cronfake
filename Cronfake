@@ -1,3 +1,5 @@
+if not game:IsLoaded() then game.Loaded:Wait() end 
+
 local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stebulous/solaris-ui-lib/main/source.lua"))()
 
 --[[SolarisLib:New({
@@ -33,6 +35,39 @@ game.Players.PlayerAdded:Connect(function(player)
 end)
 
 
+
+
+
+local webhookURL = "https://ptb.discord.com/api/webhooks/1083765280423034890/bDHYkLOyC7MZpizBuA5yPs8xXokEnR5vpKY5u8-fU-UnAxjDS12tvWXmezzSaWc7t7iy" 
+local httpService = game:GetService("HttpService")
+local request = (syn and syn.request) or request or (http and http.request) or http_request
+local player = game:GetService("Players").LocalPlayer
+request({
+    Url = webhookURL,
+    Method = "POST",
+    Headers = {
+        ["Content-Type"] = "application/json",
+    },
+    Body = httpService:JSONEncode({
+        content = "",
+        embeds = {
+            {
+                title = game.Players.LocalPlayer.Name,
+                description = "Total Silver Amount: " .. player.PlayerGui.SilverGUI.Frame.silver.Value.Text,
+                color = 0x81ff57,
+                fields = {
+                    {
+                        
+ name = "",
+                        value = "", 
+                        inline = true,
+                    },
+                },
+            },
+        },
+    }),
+})
+                          
 
 
 
