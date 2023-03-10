@@ -84,6 +84,27 @@ local sec10 = tab5:Section("Useful")
 
 
 
+local toggle = sec2:Toggle("Remove blind effects", false,"false", function(t)
+	print(t)
+
+	
+	getgenv().press = t
+	
+	
+	
+	while press do task.wait(2)
+	
+game:GetService("Lighting").rawr:Remove()
+	
+	end
+  
+	
+  end)
+
+	
+
+
+
 sec:Button("FLY (DOESNST STOP UNTIL DEATH)", function()
 
 
@@ -1416,7 +1437,6 @@ pcall(function()
 end)
     
 end
-
 
 
 
