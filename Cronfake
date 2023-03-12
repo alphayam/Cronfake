@@ -1084,7 +1084,7 @@ end)
 
 
 sec:Button("Instant reset back",function()
-local playerpos = workspace.live.LocalPlayer.Torso.Position
+local playerpos = workspace.Live.LocalPlayer.Torso.Position
 wait(0.2)
 _G:set_spawn_point(playerpos)
 wait(0.5)
