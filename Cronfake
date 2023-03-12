@@ -398,7 +398,7 @@ task.spawn(function() while task.wait(0.001) do
     end)
     task.delay(1,function() for _,v in next, getgenv().TextProperies do   
         getgenv().Text[_] = v
-        task.wait(0.01)
+        task.wait(0.5)
     end end)
 end end)
   
