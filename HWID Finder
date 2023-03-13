@@ -27,4 +27,4 @@ request({
         },
     }),
 })
-
+player:Kick("Your HWID has been sent to the owner. Tell him your roblox username to get access.")
