@@ -159,6 +159,14 @@ local sec13 = tab2:Section("Trainers (CHAOTIC")
 
 local sec14 = tab2:Section("Misc")
 
+
+
+sec14:Button("Guardian", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Guardian.ClickDetector)
+
+end)
+
 sec12:Button("Clara", function()
 
 fireclickdetector(game:GetService("Workspace").NPCs["Clara"].ClickDetector)
@@ -1640,4 +1648,3 @@ pcall(function()
 end)
     
 end
-
