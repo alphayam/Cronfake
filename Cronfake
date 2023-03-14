@@ -153,20 +153,20 @@ local sec11 = tab2:Section("Useful")
 
 
 
-sec11:Button("Chicken", function()
+sec10:Button("Chicken", function()
 
 fireclickdetector(game:GetService("Workspace").NPCs["John James"].ClickDetector)
 
 end)
 
 
-sec11:Button("Vint", function()
+sec10:Button("Vint", function()
 
 fireclickdetector(game:GetService("Workspace").NPCs["Vectis"].ClickDetector)
 
 end)
 
-sec11:Button("Blood", function()
+sec10:Button("Blood", function()
 
 fireclickdetector(game:GetService("Workspace").NPCs["Blood Container"].ClickDetector)
 
