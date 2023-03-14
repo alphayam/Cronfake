@@ -161,6 +161,38 @@ local sec14 = tab2:Section("Misc")
 
 local sec15 = tab2:Section("Weapons")
 
+local sec16 = tab2:Section("Sigil quests")
+local anna = game:GetService("Workspace").NPCs.Anna.Trinket.Value
+sec16:Button("Anna wants "..anna, function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Anna.ClickDetector)
+
+end)
+
+sec16:Button("Potio (Vint)", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Potio.ClickDetector)
+
+end)
+
+sec16:Button("Rubru (Break merchant window)", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Rubru.ClickDetector)
+
+end)
+
+
+sec16:Button("Alana (Show spell)", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Alana.ClickDetector)
+
+end)
+
+sec16:Button("Peasant (Give silver)", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Peasant.ClickDetector)
+
+end)
 
 sec15:Button("Greatsword", function()
 
@@ -187,6 +219,19 @@ fireclickdetector(game:GetService("Workspace").NPCs.Katana.ClickDetector)
 
 end)
 
+
+sec14:Button("Merchant", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Merchant.ClickDetector)
+
+end)
+
+
+sec14:Button("House guy", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Ozymandias.ClickDetector)
+
+end)
 
 sec14:Button("Guardian", function()
 
