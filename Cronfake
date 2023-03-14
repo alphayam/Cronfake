@@ -115,21 +115,20 @@ local Divinos = workspace.NPCs.Divinos.Torso
 --win:Tab(title <string>)
 local tab = win:Tab("Blatant/Risky")
 
-local tab2 = win:Tab("Visual")
+local tab2 = win:Tab("Misc")
 
 
 local tab3 = win:Tab("Points")
 
 local tab4 = win:Tab("ESP")
 
-local tab5 = win:Tab("Misc")
-
+local tab5 = win:Tab("Visual")
 
 
 
 local sec = tab:Section("Useful")
 
-local sec2 = tab2:Section("ClientSided")
+local sec2 = tab5:Section("ClientSided")
 
 
 local sec3 = tab3:Section("Points")
@@ -148,8 +147,30 @@ local sec8 = tab4:Section("Rare items esp")
 
 local sec9 = tab4:Section("Misc")
 
-local sec10 = tab5:Section("Useful")
+local sec10 = tab2:Section("Buy from anywhere")
 
+local sec11 = tab2:Section("Useful")
+
+
+
+sec11:Button("Chicken", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["John James"].ClickDetector)
+
+end)
+
+
+sec11:Button("Vint", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Vectis"].ClickDetector)
+
+end)
+
+sec11:Button("Blood", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Blood Container"].ClickDetector)
+
+end)
 
 
 
@@ -188,7 +209,7 @@ end)
 
 
 
-local toggle = sec10:Toggle("Buy scrolls from volumen (STAND CLOSE TO HIM)", false,"false", function(t)
+local toggle = sec11:Toggle("Buy scrolls from volumen (STAND CLOSE TO HIM)", false,"false", function(t)
 	print(t)
 
 	local function Press(Button)
@@ -233,7 +254,7 @@ local toggle = sec10:Toggle("Buy scrolls from volumen (STAND CLOSE TO HIM)", fal
 
 
 
-local toggle = sec10:Toggle("No Fall Damage", false,"false", function(t)
+local toggle = sec11:Toggle("No Fall Damage", false,"false", function(t)
 	print(t)
 	getgenv().press = t
 
@@ -1505,5 +1526,4 @@ pcall(function()
 end)
     
 end
-
 
