@@ -155,6 +155,9 @@ local sec11 = tab6:Section("Useful")
 
 local sec12 = tab2:Section("Trainers (ORDERLY)")
 
+local sec13 = tab2:Section("Trainers (CHAOTIC")
+
+local sec14 = tab2:Section("Misc")
 
 sec12:Button("Clara", function()
 
@@ -197,7 +200,69 @@ fireclickdetector(game:GetService("Workspace").NPCs["Shazam"].ClickDetector)
 end)
 
 
+sec13:Button("Suco", function()
 
+fireclickdetector(game:GetService("Workspace").NPCs["Suco"].ClickDetector)
+
+end)
+
+
+
+sec13:Button("Gladio", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Gladio"].ClickDetector)
+
+end)
+
+sec13:Button("Assassin", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Assassin"].ClickDetector)
+
+end)
+
+
+sec13:Button("Grandis", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Grandis"].ClickDetector)
+
+end)
+
+sec13:Button("Hama", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Hama"].ClickDetector)
+
+end)
+
+sec13:Button("Prae", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Prae"].ClickDetector)
+
+end)
+
+
+
+sec13:Button("One", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["One"].ClickDetector)
+
+end)
+
+
+
+sec14:Button("Divinos", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Divinos"].ClickDetector)
+
+end)
+
+
+
+
+sec14:Button("Ex (ronin quest)", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Ex"].ClickDetector)
+
+end)
 
 
 
