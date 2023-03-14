@@ -115,7 +115,7 @@ local Divinos = workspace.NPCs.Divinos.Torso
 --win:Tab(title <string>)
 local tab = win:Tab("Blatant/Risky")
 
-local tab2 = win:Tab("Misc")
+local tab2 = win:Tab("Click from anywhere")
 
 
 local tab3 = win:Tab("Points")
@@ -123,6 +123,8 @@ local tab3 = win:Tab("Points")
 local tab4 = win:Tab("ESP")
 
 local tab5 = win:Tab("Visual")
+
+local tab6 = win:Tab("Misc")
 
 
 
@@ -147,9 +149,56 @@ local sec8 = tab4:Section("Rare items esp")
 
 local sec9 = tab4:Section("Misc")
 
-local sec10 = tab2:Section("Buy from anywhere")
+local sec10 = tab2:Section("Hp restores")
 
-local sec11 = tab2:Section("Useful")
+local sec11 = tab6:Section("Useful")
+
+local sec12 = tab2:Section("Trainers (ORDERLY)")
+
+
+sec12:Button("Clara", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Clara"].ClickDetector)
+
+end)
+
+
+
+sec12:Button("Piandao", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Pi"].ClickDetector)
+
+end)
+
+
+
+
+sec12:Button("Solis", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Solis"].ClickDetector)
+
+end)
+
+
+
+
+sec12:Button("Arbor", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Arbor"].ClickDetector)
+
+end)
+
+
+
+sec12:Button("Shazam", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs["Shazam"].ClickDetector)
+
+end)
+
+
+
+
 
 
 
