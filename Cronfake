@@ -159,6 +159,33 @@ local sec13 = tab2:Section("Trainers (CHAOTIC")
 
 local sec14 = tab2:Section("Misc")
 
+local sec15 = tab2:Section("Weapons")
+
+
+sec15:Button("Greatsword", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Greatsword.PurchaseInfo.ClickDetector)
+
+end)
+
+
+sec15:Button("Caestus", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Caestus.ClickDetector)
+
+end)
+
+sec15:Button("Dagger", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Dagger.ClickDetector)
+
+end)
+
+sec15:Button("Katana", function()
+
+fireclickdetector(game:GetService("Workspace").NPCs.Katana.ClickDetector)
+
+end)
 
 
 sec14:Button("Guardian", function()
